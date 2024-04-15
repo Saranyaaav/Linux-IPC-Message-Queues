@@ -42,12 +42,10 @@ int main()
 	// and returns identifier 
 	msgid = msgget(key, 0666 | IPC_CREAT); 
 	message.mesg_type = 1; 
-	printf("Write Data : "); 
-	gets(message.mesg_text); 
-	// msgsnd to send message 
+	printf("Write Data is : %s\n",message.mesg_text); 
 	msgsnd(msgid, &message, sizeof(message), 0); 
 	// display the message 
-	printf("Data send is : %s \n", message.mesg_text); 
+	printf("Data send is : %s\n", message.mesg_text); 
 	return 0; 
 }
 ```
