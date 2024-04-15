@@ -21,7 +21,7 @@ Execute the C Program for the desired output.
 # PROGRAM:
 
 ## C program that receives a message from message queue and display them
-### Writer Process
+### Writer Process:
 ```
 // C Program for Message Queue (Writer Process) 
 #include <stdio.h> 
@@ -51,7 +51,7 @@ int main()
 	return 0; 
 }
 ```
-### Reader Process
+### Reader Process:
 ```
 // C Program for Message Queue (Reader Process)
 #include <stdio.h>
@@ -84,14 +84,17 @@ int main()
 }
 ```
 
-## OUTPUT
+## OUTPUT:
 $ ./writer.o
+
 ![Screenshot 2024-04-15 150831](https://github.com/Saranyaaav/Linux-IPC-Message-Queues/assets/144870813/fd27b62f-8219-42c6-8e4d-61b8b1259960)
 
 $ ./reader.o
+
 ![Screenshot 2024-04-15 150304](https://github.com/Saranyaaav/Linux-IPC-Message-Queues/assets/144870813/34c41141-cdeb-4cd9-931f-c127dbf2ebb0)
 
 $ ipcs
+
 ![Screenshot 2024-04-15 150925](https://github.com/Saranyaaav/Linux-IPC-Message-Queues/assets/144870813/4911cd5e-6a3f-48aa-8d58-1bc79ade5185)
 
 # RESULT:
