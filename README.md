@@ -27,7 +27,6 @@ Execute the C Program for the desired output.
 #include <stdio.h> 
 #include <sys/ipc.h> 
 #include <sys/msg.h> 
-
 // structure for message queue 
 struct mesg_buffer { 
 	long mesg_type; 
@@ -45,7 +44,7 @@ int main()
 	printf("Write Data is : %s\n",message.mesg_text); 
 	msgsnd(msgid, &message, sizeof(message), 0); 
 	// display the message 
-	printf("Data send is : %s\n", message.mesg_text); 
+	printf("Data Send is : %s\n", message.mesg_text); 
 	return 0; 
 }
 ```
@@ -55,7 +54,6 @@ int main()
 #include <stdio.h>
 #include <sys/ipc.h>
 #include <sys/msg.h>
-
 // structure for message queue
 struct mesg_buffer {
 	long mesg_type;
@@ -73,9 +71,7 @@ int main()
 	// msgrcv to receive message
 	msgrcv(msgid, &message, sizeof(message), 1, 0);
 	// display the message
-	printf("Data Received is : %s \n",
-			message.mesg_text);
-
+	printf("Data Received is : %s\n",message.mesg_text);
 	// to destroy the message queue
 	msgctl(msgid, IPC_RMID, NULL);
 	return 0;
